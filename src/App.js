@@ -1,13 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Navs from './components/Navs';
+import Home from './pages/Home';
+import Starred from './pages/Starred';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element="test" />
-      <Route path="/starred" element="test2" />
-      <Route path="*" element="This is 404 page" />
-    </Routes>
+    <div>
+      <Navs />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/starred" element={<Starred />} />
+        <Route path="*" element={<div>This is 404 page</div>} />
+      </Routes>
+    </div>
   );
 }
 
