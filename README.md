@@ -32,4 +32,4 @@ Changes to .eslintrc and package.json:
 Changes to react-router:
 
 1. Use v6 instad of v5
-2. Change Switch tou Routes
+2. Change Switch to Routes
