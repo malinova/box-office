@@ -70,7 +70,7 @@ const Show = () => {
       <ShowMainData
         image={show.image}
         name={show.name}
-        trating={show.rating}
+        rating={show.rating}
         summary={show.summary}
         tags={show.genres}
       />
@@ -85,7 +85,7 @@ const Show = () => {
 
       <div>
         <h2>Seasons</h2>
-        <Seasons seasons={show._embedded.cast} />
+        <Seasons seasons={show._embedded.seasons} />
       </div>
 
       <div>

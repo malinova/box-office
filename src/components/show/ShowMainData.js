@@ -6,7 +6,7 @@ import { Star } from '../styled';
 const ShowMainData = ({ name, rating, summary, tags, image }) => {
   return (
     <div>
-      <img src={image ? image.original : IMG_PLACEHOLDER} alt="show-cover" />
+      <img src={image ? image.medium : IMG_PLACEHOLDER} alt="show-cover" />
       <div>
         <div>
           <h1>{name}</h1>
