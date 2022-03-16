@@ -55,3 +55,8 @@ export const Star = styled.div`
     39% 35%
   );
 `;
+
+export const NoResults = styled.div`
+  text-align: center;
+  padding: 0 1rem;
+`;

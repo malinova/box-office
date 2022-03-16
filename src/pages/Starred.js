@@ -1,15 +1,10 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import MainPageLayout from '../components/MainPageLayout';
 import { useShows } from '../misc/custom-hooks';
 import { apiGet } from '../misc/config';
 import ShowGrid from '../components/show/ShowGrid';
-
-const NoShows = styled.div`
-  text-align: center;
-  padding: 0 1rem;
-`;
+import { NoResults } from '../components/styled';
 
 const Starred = () => {
   const [starred] = useShows();
@@ -41,7 +36,7 @@ const Starred = () => {
     <MainPageLayout>
       {isLoading && <div>Shows are still loading</div>}
       {error && <div>Error occured: {error}</div>}
-      {!isLoading && !shows && <NoShows>No shows were added</NoShows>}
+      {!isLoading && !shows && <NoResults>No shows were added</NoResults>}
       {!isLoading && !error && shows && <ShowGrid data={shows} />}
     </MainPageLayout>
   );

@@ -4,6 +4,7 @@ import ActorGrid from '../components/actor/ActorGrid';
 import CustomRadio from '../components/CustomRadio';
 import MainPageLayout from '../components/MainPageLayout';
 import ShowGrid from '../components/show/ShowGrid';
+import { NoResults } from '../components/styled';
 import { apiGet } from '../misc/config';
 import { useLastQuery } from '../misc/custom-hooks';
 import {
@@ -14,7 +15,7 @@ import {
 
 const renderResults = results => {
   if (results && results.length === 0) {
-    return <div>No results</div>;
+    return <NoResults>No results</NoResults>;
   }
   if (results && results.length > 0) {
     return results[0].show ? (
